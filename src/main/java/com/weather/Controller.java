@@ -52,11 +52,11 @@ public class Controller {
 
                 if (!output.isEmpty()) {
                     JSONObject object = new JSONObject(output);
-                    temp_info.setText("TEMPERATURE:  " + object.getJSONObject("main").getDouble("temp"));
-                    temp_feels.setText("FEELS:  " + object.getJSONObject("main").getDouble("feels_like"));
-                    temp_max.setText("MAX:  " + object.getJSONObject("main").getDouble("temp_max"));
-                    temp_min.setText("MIN:  " + object.getJSONObject("main").getDouble("temp_min"));
-                    pressure.setText("PRESSURE:  " + object.getJSONObject("main").getDouble("pressure"));
+                    temp_info.setText("TEMPERATURE:  " + object.getJSONObject("main").getDouble("temp") + " ℃");
+                    temp_feels.setText("FEELS:  " + object.getJSONObject("main").getDouble("feels_like") + " ℃");
+                    temp_max.setText("MAX:  " + object.getJSONObject("main").getDouble("temp_max") + " ℃");
+                    temp_min.setText("MIN:  " + object.getJSONObject("main").getDouble("temp_min") + " ℃");
+                    pressure.setText("PRESSURE:  " + object.getJSONObject("main").getDouble("pressure") / 10 + " kPa");
                 }
             }
         });
